@@ -1,5 +1,6 @@
 // ==UserScript==
-// @name form data saver
+// @name Form data saver
+// @description Save data fields to browser localStorage, unique for page URI. You can Save, Restore and Clear them.
 // @author Khripkov Denis
 // @email denisx@denisx.ru
 // @site http://www.denisx.ru
