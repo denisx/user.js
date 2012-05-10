@@ -11,6 +11,7 @@
 // ==/UserScript== 
 
 var m={};
+//var ii=0;
 
 function setButtons(){
 		$('.submit_reply').each(function(){
@@ -56,13 +57,12 @@ function setButtons(){
 			}
 		});
 
-		setTimeout(setButtons,2000);
 	}
 
 function main(){
-
-	$('a.author').each(function(){
+	$('a.author:not(.has_copylink)').each(function(){
 		var t=$(this);
+		t.addClass('has_copylink');
 		var span=$('<span>',{'class':'pseudo',text:' copy'}).insertBefore(t.parent());
 
 		span.click(function(){
@@ -81,13 +81,16 @@ function main(){
 		span.css({'border-bottom':'1px dotted #aaa', cursor:'pointer', position: 'absolute', margin:'75px 0 0 -60px','z-index':1000});
 	});
 
+//	ii++;
+//	console.log(ii, $('a.author:not(.has_copylink)').length, m);
+
 	setButtons();
 
-	<!-- Yandex.Metrika counter -->
-	$('<img src="//mc.yandex.ru/watch/154772" style="position:absolute; left:-9999px;" alt="" />').appendTo('body');
-	<!-- /Yandex.Metrika counter -->
-
+	setTimeout(main,3000);
 
 }
 main();
 
+	<!-- Yandex.Metrika counter -->
+	$('<img src="//mc.yandex.ru/watch/154772" style="position:absolute; left:-9999px;" alt="" />').appendTo('body');
+	<!-- /Yandex.Metrika counter -->
