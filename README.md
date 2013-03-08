@@ -5,7 +5,7 @@
 Save data fields to browser localStorage, unique for page URI.
 You can Save, Restore and Clear them.
 
-for FireFox & Chrome
+for FireFox & Chrome.
 
 
 ## VK users to list
